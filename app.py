@@ -111,7 +111,7 @@ def predict_region(img,model) :
                     
     return model_temp
 
-st.title("Image Forgery Detection (Copy-Move Forgery Detection)")
+st.title("Image Forgery Detection ")
 st.header("Upload a image to get whether image is forged or authentic")
 # To View Uploaded Image
 image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
