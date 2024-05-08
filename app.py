@@ -69,21 +69,21 @@ def prepare_image(image_path):
 
     
 #Load model 
-json_file = open("mount\\src\\image-forgery-detection\\v1model.json", 'r')
+json_file = open("v1model.json", 'r')
 model_json = json_file.read()
 json_file.close()
 model = model_from_json(model_json)
 # load weights into new model
-model.load_weights("mount\\src\\image-forgery-detection\\v1model.h5")
+model.load_weights("v1model.h5")
 
 #Load model for phase 2 
 # load json and create model
-json_file2 = open("mount\\src\\image-forgery-detection\\dunetm.json", 'r')
+json_file2 = open("dunetm.json", 'r')
 loaded_model_json = json_file2.read()
 json_file2.close()
 #load weights 
 loaded_model = model_from_json(loaded_model_json)
-loaded_model.load_weights("mount\\src\\image-forgery-detection\\dunet.h5")
+loaded_model.load_weights("dunet.h5")
 
 def predict(image,model) :
     im = Image.open(image)
