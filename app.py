@@ -145,7 +145,7 @@ else :
         st.image(temp_img)
         predi=predict_region(img_static_path,loaded_model)  
         ela_img,pred=predict(img_static_path,model)
-        st.text("ELA image for this image")
+        st.text("i")
         st.image(ela_img)
         pred=pred[0]
         st.markdown("Probability of input image to be real is " + str(pred[0]))
